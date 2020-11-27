@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/yurkins/BearnSDK.git', :branch => '1.0.0' }
 
   s.ios.deployment_target = '12.1'
-  s.vendored_frameworks = 'BearnSDK.xcframework'
+  s.vendored_frameworks = 'BearnSDK/BearnSDK.xcframework'
   s.frameworks = "BearnSDK"
   
   s.dependency 'Kingfisher'
