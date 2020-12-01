@@ -1,5 +1,5 @@
 #
-#  MyFiziqSDKHealthKit
+#  BearnSDK
 #
 #  Copyright (c) 2020 Bearn. All rights reserved.
 #
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.license          = "MIT"
   s.module_name      = 'BearnSDK'
   s.author           = { 'Bearn' => 'dev@berancorp.com' }
-  s.source           = { :git => 'https://github.com/yurkins/BearnSDK.git', :branch => '1.0.0' }
+  s.source           = { :git => 'https://github.com/BearnIt/BearnSDK.git', :branch => '1.0.0' }
 
   s.ios.deployment_target = '12.1'
   s.vendored_frameworks = 'BearnSDK/BearnSDK.xcframework'
@@ -45,12 +45,12 @@ Pod::Spec.new do |s|
   
   # MyFiziq
   s.dependency 'MyFiziqSDK', '~> 19.1.16'
-  s.dependency 'MyFiziqSDKCommon'
+  s.dependency 'MyFiziqSDKCommon', '~> 19.1.16'
+  s.dependency 'MyFiziqSDKBilling', '~> 19.1.16'
   s.dependency 'MyFiziqSDKLoginView'
   s.dependency 'MyFiziqSDKInputView'
   s.dependency 'MyFiziqSDKOnboardingView'
   s.dependency 'MyFiziqSDKProfileView'
   s.dependency 'MyFiziqSDKTrackingView'
-  s.dependency 'MyFiziqSDKBilling'
   s.dependency 'MyFiziqSDKHealthKit'
 end
