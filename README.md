@@ -4,7 +4,7 @@
 
 ## 2. Add BearnSDK private repo. Command in terminal:
 ```bash
-pod repo add bearn-private https://github.com/BearnIt/bearn-ios-sdk-podrepo
+pod repo add bearn-private https://github.com/BearnIt/bearn_ios_sdk_podrepo
 ```
 ```
 username: bearn-will-provide
@@ -23,7 +23,7 @@ password: bearn-will-provide
 ## 4. In project podfile:
 
 ```bash
-source 'https://github.com/BearnIt/bearn-ios-sdk-podrepo'
+source 'https://github.com/BearnIt/bearn_ios_sdk_podrepo'
 source 'https://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/myfiziq-sdk-podrepo'
 source 'https://github.com/CocoaPods/Specs.git'
 
