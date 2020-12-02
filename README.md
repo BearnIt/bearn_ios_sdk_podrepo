@@ -27,7 +27,7 @@ source 'https://github.com/BearnIt/bearn_ios_sdk_podrepo'
 source 'https://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/myfiziq-sdk-podrepo'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '13.0'
+platform :ios, '12.1'
 
 use_frameworks!
 inhibit_all_warnings!
