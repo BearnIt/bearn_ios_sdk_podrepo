@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.dependency 'JWTDecode'
   s.dependency 'OAuthSwift', '~> 2.0.0'
   s.dependency 'Plaid', '~> 2.0'
-  
+      
   # UI
   s.dependency 'IQKeyboardManagerSwift'
   s.dependency 'MBProgressHUD'
