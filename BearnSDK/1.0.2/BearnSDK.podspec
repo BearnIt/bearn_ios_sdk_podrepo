@@ -17,14 +17,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://berancorp.com'
   s.license          = "MIT"
   s.module_name      = 'BearnSDK'
   s.author           = { 'Bearn' => 'dev@berancorp.com' }
-  s.source           = { :git => 'https://github.com/BearnIt/bearn_ios_sdk.git', :branch => '1.0.1' }
+  s.source           = { :git => 'https://github.com/BearnIt/bearn_ios_sdk.git', :branch => '1.0.2' }
 
   s.ios.deployment_target = '12.1'
   s.vendored_frameworks = 'BearnSDK/BearnSDK.xcframework'
