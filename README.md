@@ -7,9 +7,11 @@
 pod repo add bearn-private https://github.com/BearnIt/bearn_ios_sdk_podrepo
 ```
 ```
-username: bearn-will-provide
-password: bearn-will-provide
+username: your-github-user
+password: your-github-password
 ```
+*NOTE: Ask for access to the repo if your user has no access to it.
+
 
 ## 3. Add MyFiziqSDK private repo. Command in terminal:
 ```bash
