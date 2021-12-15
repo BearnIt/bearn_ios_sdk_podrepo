@@ -38,6 +38,7 @@ post_install do |installer|
   end
 end
 ```
+*NOTE: in some cases need to use `pod install --repo-update` instead of `pod install`
 
 ## 4. Add keys to `Info.plist` :
 ```      
