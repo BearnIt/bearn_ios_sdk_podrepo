@@ -12,24 +12,13 @@ password: your-github-password
 ```
 *NOTE: Ask for access to the repo if your user has no access to it.
 
-
-## 3. Add MyFiziqSDK private repo. Command in terminal:
-```bash
-pod repo add myfiziq-private https://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/myfiziq-sdk-podrepo
-```
-```
-username: bearn-will-provide
-password: bearn-will-provide
-```
-
-## 4. In project podfile:
+## 3. In project podfile:
 
 ```bash
 source 'https://github.com/BearnIt/bearn_ios_sdk_podrepo'
-source 'https://git-codecommit.ap-southeast-1.amazonaws.com/v1/repos/myfiziq-sdk-podrepo'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '12.1'
+platform :ios, '13.4'
 
 use_frameworks!
 inhibit_all_warnings!
@@ -42,15 +31,15 @@ post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
-      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 12.0
-         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 13.4
+         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.4'
       end
     end
   end
 end
 ```
 
-## 5. Add keys to `Info.plist` :
+## 4. Add keys to `Info.plist` :
 ```      
         <key>CFBundleURLTypes</key>
         <array>
@@ -113,10 +102,10 @@ end
         <string>"YOUR_APP_NAME" app needs your location to send you the most appropriate offers based on your current location.</string>
 ```
 
-## 6. Select `YourProject->TargetName-> Signing & Capabilities` tab -> +(Add) `HealthKit`
+## 5. Select `YourProject->TargetName-> Signing & Capabilities` tab -> +(Add) `HealthKit`
 
 
-## 7. Setup code for BearnSDK in AppDelegate & SceneDelegate:
+## 6. Setup code for BearnSDK in AppDelegate & SceneDelegate:
 
 ```swift
 // In AppDelegate.swift
@@ -145,7 +134,7 @@ import BearnSDK
     }
 ```
 
-## 8. Show Bearn:
+## 7. Show Bearn:
 
 ```swift
 import BearnSDK
