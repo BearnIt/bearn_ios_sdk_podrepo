@@ -38,7 +38,6 @@ Pod::Spec.new do |s|
   s.dependency 'DeviceKit'
   s.dependency 'Firebase/DynamicLinks'
 
-
   # Following pods are for AHI SDKs
   s.dependency 'MyFiziqSDKCoreLite', '~> 21.1.1'
   #pod 'MFZFaceScan', '~> 21.1.1'
