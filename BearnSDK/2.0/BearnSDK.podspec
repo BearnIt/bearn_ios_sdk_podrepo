@@ -17,16 +17,14 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.10'
+  s.version          = '2.0.11'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://berancorp.com'
   s.license          = "MIT"
   s.module_name      = 'BearnSDK'
   s.author           = { 'Bearn' => 'dev@berancorp.com' }
-  # s.source           = { :path => 'BearnSDK.xcframework'}  
   s.source           = { :git => 'https://github.com/BearnIt/bearn_ios_sdk.git', :branch => '2.0' }
-
 
   s.ios.deployment_target = '13.4'
   s.vendored_frameworks = 'BearnSDK.xcframework'
@@ -40,20 +38,17 @@ Pod::Spec.new do |s|
   s.dependency 'DeviceKit'
   s.dependency 'Firebase/DynamicLinks'
 
+
+  # Following pods are for AHI SDKs
+  s.dependency 'MyFiziqSDKCoreLite', '~> 21.1.1'
+  #pod 'MFZFaceScan', '~> 21.1.1'
+  s.dependency 'AHIMultiScan', '~> 21.1.1'
+  s.dependency 'SpotHeroEmailValidator', '2.0.0'
+
   s.dependency 'IQKeyboardManagerSwift', '6.5.9'
   s.dependency 'MBProgressHUD', '~> 1.2.0'
   s.dependency 'NotificationBannerSwift', '2.5.1'
   s.dependency 'Charts', '~> 3.6.0'
   s.dependency 'RangeSeekSlider', '~> 1.8.0'
-  
-  # MyFiziq
-  # s.dependency 'MyFiziqSDK', '~> 19.1.16'
-  # s.dependency 'MyFiziqSDKCommon'
-  # s.dependency 'MyFiziqSDKLoginView'
-  # s.dependency 'MyFiziqSDKInputView'
-  # s.dependency 'MyFiziqSDKOnboardingView'
-  # s.dependency 'MyFiziqSDKProfileView'
-  # s.dependency 'MyFiziqSDKTrackingView'
-  # s.dependency 'MyFiziqSDKBilling'
-  # s.dependency 'MyFiziqSDKHealthKit'
+
 end
