@@ -17,7 +17,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.11'
+  s.version          = '2.0.12'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://berancorp.com'
@@ -36,8 +36,11 @@ Pod::Spec.new do |s|
   s.dependency 'OAuthSwift', '~> 2.0.0'
   s.dependency 'Plaid', '~> 2.0'
   s.dependency 'DeviceKit'
+  s.dependency 'Firebase/Core'
+  s.dependency 'Firebase/Analytics'
+  s.dependency 'Firebase/Messaging'
+  s.dependency 'Firebase/Crashlytics'
   s.dependency 'Firebase/DynamicLinks'
-
 
   # Following pods are for AHI SDKs
   s.dependency 'MyFiziqSDKCoreLite', '~> 21.1.1'
