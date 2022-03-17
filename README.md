@@ -142,7 +142,111 @@ import BearnSDK
 class ViewController: UIViewController {
 ……………………………………………………………………………………
     @IBAction func btnShowTouch(_ sender: Any) {
-        Bearn.shared.present(on: self)
+        Bearn.shared.present(on: self)        
     }
 }
 ```
+
+## 8. Show Bearn Federated Login:
+
+```swift
+import BearnSDK
+class ViewController: UIViewController {
+……………………………………………………………………………………
+    @IBAction func btnFederatedLoginTouch(_ sender: Any) {
+        Bearn.shared.loadDefaultTheme()
+        Bearn.shared.present(on: self,
+                             parterId: "22ffa303-6c84-11ea-adfe-0e4cb9ff8a2a",
+                             firstName: "John",
+                             lastName: "Doe",
+                             email: "john.doe@anymail.com",
+                             externalId: "121212121212121212121221",
+                             token: "11ffa303-6c84-11ea-adfe-0e4cb9ff1234")
+    }
+}
+```
+
+*NOTE: Ask Bearn for **parterId**.
+
+
+
+## 9. Customizing strings inside the app.
+
+Most of the SDK strings can be changed by proving a .strings file.
+
+Use the loadCustomInfoFrom function to pass the name of the string file that the SDK should use, you can ommit the file .strings extension. In case you have the .strings file in a bundle other than the main bundle, you can pass the bundle to the same function. By default it will use the main app bundle.
+
+
+```swift
+import BearnSDK
+class ViewController: UIViewController {
+……………………………………………………………………………………
+    @IBAction func btnShowTouch(_ sender: Any) {
+        Bearn.shared.loadCustomInfoFrom(localizationStringsFile: "BearnStrings")
+        Bearn.shared.present(on: self)        
+    }
+}
+```
+
+Sample for providing the custom bundle:
+```swift
+Bearn.shared.loadCustomInfoFrom(bundle: .main, localizationStringsFile: "BearnStrings")
+```
+
+## 10. Customizing colors inside the app.
+
+Most of the UI colors inside the SDK are customizable based on each element accessibility identifier (if declared). The color styling implementation is based on a JSON file that declares all the global colors used across the entire SDK and each screen UI elements color declaration. Most screens have an identifier that can be found in the demo BearnColors.json file, this will be the key in the JSON file under which all child elements can be customized.
+
+To load the colors JSON file use the same function that we use for loading strings just with an extra parameter. Example:
+
+```swift
+import BearnSDK
+class ViewController: UIViewController {
+……………………………………………………………………………………
+    @IBAction func btnShowTouch(_ sender: Any) {
+        Bearn.shared.loadCustomInfoFrom(bundle: .main, localizationStringsFile: "BearnStrings", localizationColorsFile: "BearnColors.json")
+        Bearn.shared.present(on: self)        
+    }
+}
+```
+All colors are declared in hex format. When we want to use a globally declared color we will declare the color name with a "@" prefix. E.g ```@bearnText``` where ```bearnText``` is declared in the global colors section. Additionally if the color needs to have the alpha channel changed then it can be declared as such ```@bearnText:0.5```, this will result in the bearnText color with 0.5 alpha channel.
+
+Some buttons can be have each state configurable. For example, to customiza the normal state and the selectate state for a button with accessibility identifier set to ```report_option_4``` we will use the following JSON:
+
+```json
+        "report_option_4": {
+            "normal": {
+                "text": "#000000",
+                "background": "#FFFFFF"
+            },
+            "selected": {
+                "text": "#000000",
+                "background": "@grey"
+            }
+        }
+```
+
+Where `text` represents the titleLabel text color for each state and background is the background color for each state. In addition to the `normal` and `selected state`, the `disabled` and `highlighted` state are also supported. Please note that not all buttons support this by default, in case you need better customization support, please feel free to contact us.
+
+Another example for customizing alerts with 2 buttons (Yes and NO) will look like this:
+
+```json 
+    "yesAndNoAlert": {
+        "yesButton": {
+            "text": "#FFFFFF",
+            "background": "@bearnGreen"
+        },
+        "noButton": {
+            "text": "@bearnAzureGreen",
+            "background": "#FFFFFF"
+        },
+        "titleLabel": "#000000"
+    }
+```
+
+Where `yesAndNoAlert` is the key name of the screen, `yesButton` is the key for the yes (main) button and `noButton` for No button. `titleLabel` key will represent the color for our alert message label.
+
+Please note: when you do not declare the styles for each individual button state, the values will be assigned only for the normal state by default. 
+
+
+
