@@ -17,7 +17,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.23'
+  s.version          = '2.0.24'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://berancorp.com'
@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
 
   # Following pods are for AHI SDKs
   s.dependency 'MyFiziqSDKCoreLite', '~> 21.1.1'
-  #pod 'MFZFaceScan', '~> 21.1.1'
+  s.dependency 'MFZFaceScan', '~> 21.1.1'
   s.dependency 'AHIMultiScan', '~> 21.1.1'
   s.dependency 'SpotHeroEmailValidator', '2.0.0'
 
