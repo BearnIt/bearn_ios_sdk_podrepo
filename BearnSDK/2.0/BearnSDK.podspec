@@ -17,13 +17,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.28'
+  s.version          = '2.0.30'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
-  s.homepage         = 'https://berancorp.com'
+  s.homepage         = 'https://bearncorp.com'
   s.license          = "MIT"
   s.module_name      = 'BearnSDK'
-  s.author           = { 'Bearn' => 'dev@berancorp.com' }
+  s.author           = { 'Bearn' => 'dev@bearncorp.com' }
   s.source           = { :git => 'https://github.com/BearnIt/bearn_ios_sdk.git', :branch => '2.0' }
 
   s.ios.deployment_target = '13.4'
