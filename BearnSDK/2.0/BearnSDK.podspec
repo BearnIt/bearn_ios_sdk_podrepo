@@ -17,7 +17,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.32'
+  s.version          = '2.0.33'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://bearncorp.com'
