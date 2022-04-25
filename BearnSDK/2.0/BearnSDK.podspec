@@ -17,7 +17,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.33'
+  s.version          = '2.0.34'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://bearncorp.com'
@@ -43,9 +43,9 @@ Pod::Spec.new do |s|
   s.dependency 'Firebase/DynamicLinks'
 
   # Following pods are for AHI SDKs
-  s.dependency 'MyFiziqSDKCoreLite', '~> 21.1.1'
-  s.dependency 'MFZFaceScan', '~> 21.1.1'
-  s.dependency 'AHIMultiScan', '~> 21.1.1'
+  s.dependency 'MyFiziqSDKCoreLite', '21.1.3'
+  s.dependency 'MFZFaceScan', '21.1.3'
+  s.dependency 'AHIMultiScan', '21.1.3'
   s.dependency 'SpotHeroEmailValidator', '2.0.0'
 
   s.dependency 'IQKeyboardManagerSwift', '6.5.9'
