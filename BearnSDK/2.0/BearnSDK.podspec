@@ -17,7 +17,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.43'
+  s.version          = '2.0.44'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://bearncorp.com'
@@ -31,9 +31,8 @@ Pod::Spec.new do |s|
   s.frameworks = "BearnSDK"
   
   s.dependency 'Kingfisher', '7.1.1'
-  s.dependency 'Auth0', '~> 2.0'
-  s.dependency 'JWTDecode', '~> 2.0'
-  s.dependency 'OAuthSwift', '~> 2.0.0'
+  s.dependency 'Auth0'
+  s.dependency 'OAuthSwift', '~> 2.0'
   s.dependency 'Plaid', '~> 2.0'
   s.dependency 'DeviceKit'
   s.dependency 'Firebase/Core'
