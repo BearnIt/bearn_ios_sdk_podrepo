@@ -17,7 +17,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.49'
+  s.version          = '2.0.50'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://bearncorp.com'
@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
   s.dependency 'IQKeyboardManagerSwift', '6.5.9'
   s.dependency 'MBProgressHUD', '~> 1.2.0'
   s.dependency 'NotificationBannerSwift', '2.5.1'
-  s.dependency 'Charts', '~> 3.6.0'
+  s.dependency 'Charts', '~> 4.1.0'
   s.dependency 'RangeSeekSlider', '~> 1.8.0'
   s.dependency 'Mantis', '~> 1.9.0'
 end
