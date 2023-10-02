@@ -17,7 +17,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BearnSDK'
-  s.version          = '2.0.59'
+  s.version          = '2.0.60'
   s.summary          = 'BearnSDK summary'
   s.description      = "BearnSDK description"
   s.homepage         = 'https://bearncorp.com'
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Bearn' => 'dev@bearncorp.com' }
   s.source           = { :git => 'https://github.com/BearnIt/bearn_ios_sdk.git', :tag => s.version }
 
-  s.ios.deployment_target = '13.4'
+  s.ios.deployment_target = '15.0'
   s.vendored_frameworks = 'BearnSDK.xcframework'
   s.frameworks = "BearnSDK"
   
@@ -42,15 +42,15 @@ Pod::Spec.new do |s|
   s.dependency 'Firebase/DynamicLinks'
 
   # Following pods are for AHI SDKs
-  s.dependency 'MyFiziqSDKCoreLite'#, '21.1.3'
-  s.dependency 'MFZFaceScan', '21.1.5'
-  s.dependency 'AHIMultiScan', '21.1.5'
-  s.dependency 'SpotHeroEmailValidator', '2.0.0'
+  s.dependency 'AHIMultiScan', '~> 23.9.0'
+  s.dependency 'AHIFaceScan', '~> 23.9.0'
+  s.dependency 'AHIBodyScan', '~> 23.9.0'
+  s.dependency 'SpotHeroEmailValidator', '~> 2.0'
 
-  s.dependency 'IQKeyboardManagerSwift', '6.5.9'
+  s.dependency 'IQKeyboardManagerSwift', '~> 6.5'
   s.dependency 'MBProgressHUD', '~> 1.2.0'
-  s.dependency 'NotificationBannerSwift', '2.5.1'
-  s.dependency 'Charts', '~> 4.1.0'
+  s.dependency 'NotificationBannerSwift', '~> 3.2'
+  s.dependency 'DGCharts', '~> 5.0'
   s.dependency 'RangeSeekSlider', '~> 1.8.0'
-  s.dependency 'Mantis', '~> 1.9.0'
+  s.dependency 'Mantis', '~> 2.0'
 end
