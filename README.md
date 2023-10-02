@@ -1,5 +1,5 @@
 # BearnSDK 
-## 1. Requirements: XCode v12+, cocoapods v1.10+;
+## 1. Requirements: XCode v13+, cocoapods v1.13+;
 
 
 ## 2. Add BearnSDK private repo. Command in terminal:
@@ -16,9 +16,9 @@ password: your-github-password
 
 ```bash
 source 'https://github.com/BearnIt/bearn_ios_sdk_podrepo'
+source 'https://git-codecommit.ap-southeast-2.amazonaws.com/v1/repos/ahi-pod-ios-cocoapods'
 source 'https://github.com/CocoaPods/Specs.git'
-
-platform :ios, '13.4'
+platform :ios, '15.0'
 
 use_frameworks!
 inhibit_all_warnings!
@@ -30,7 +30,7 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.4'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
       config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
       if target.name == "SwiftAlgorithms"
          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'NO'
