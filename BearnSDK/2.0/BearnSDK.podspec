@@ -42,9 +42,9 @@ Pod::Spec.new do |s|
   s.dependency 'Firebase/DynamicLinks'
 
   # Following pods are for AHI SDKs
-  s.dependency 'AHIMultiScan', '~> 21.1.5'
-  s.dependency 'AHIFaceScan', '~> 21.1.5'
-  s.dependency 'AHIBodyScan', '~> 21.1.5'
+  s.dependency 'MyFiziqSDKCoreLite'#, '21.1.3'
+  s.dependency 'MFZFaceScan', '21.1.5'
+  s.dependency 'AHIMultiScan', '21.1.5'
   s.dependency 'SpotHeroEmailValidator', '~> 2.0'
 
   s.dependency 'IQKeyboardManagerSwift', '~> 6.5'
